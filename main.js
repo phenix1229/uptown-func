@@ -22,19 +22,24 @@ function modifyString(str, func) {
   return func(str);
 }
 
-function modifyNumber() {
+function modifyNumber(num, func) {
+  return func(num);
 }
 
-function modifyAnything() {
+function modifyAnything(val, func) {
+  return func(val);
 }
 
-function twoFuncs() {
+function twoFuncs(func1, func2) {
+  return func2(func1());
 }
 
-function twoValues() {
+function twoValues(val1, val2, func) {
+  return func(val1, val2);
 }
 
-function twoValuesRTL() {
+function twoValuesRTL(val1, val2, func) {
+  return func(val2, val1);
 }
 
 
