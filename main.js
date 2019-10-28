@@ -1,16 +1,25 @@
-function call() {
+function call(func) {
+  func();
 }
 
-function callTwice() {
+function callTwice(func) {
+  func();
+  func();
 }
 
-function callXTimes() {
+function callXTimes(func, times) {
+  while (times > 0){
+    func();
+    times--
+  }
 }
 
-function returnFromFunc() {
+function returnFromFunc(func) {
+  return func();
 }
 
-function modifyString() {
+function modifyString(str, func) {
+  return func(str);
 }
 
 function modifyNumber() {
